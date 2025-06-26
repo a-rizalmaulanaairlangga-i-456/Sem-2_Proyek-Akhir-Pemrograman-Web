@@ -4,6 +4,12 @@
     }
     include __DIR__ . '/../koneksi.php';
 
+    // Cek login dan role
+    if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+        header("Location: ../halaman_utama.php");
+        exit;
+    }
+
     // Ambil data mahasiswa
     $queryMhs = "SELECT * FROM data_mhs";
     $resultMhs = $kon->query($queryMhs);

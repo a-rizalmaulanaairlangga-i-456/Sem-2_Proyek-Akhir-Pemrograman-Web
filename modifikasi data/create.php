@@ -4,7 +4,7 @@
 
     // Cek login dan role
     if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
-        header("Location: ../login.php");
+        header("Location: ../halaman_utama.php");
         exit;
     }
 

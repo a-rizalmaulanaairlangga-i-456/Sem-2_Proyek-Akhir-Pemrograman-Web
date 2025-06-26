@@ -2,9 +2,9 @@
     session_start();
     include '../koneksi.php'; 
 
-    // Pastikan user sudah login dan memiliki peran dosen
-    if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'dosen') {
-        header("Location: ../login.php");
+    // Cek login dan role
+    if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+        header("Location: ../halaman_utama.php");
         exit;
     }
 

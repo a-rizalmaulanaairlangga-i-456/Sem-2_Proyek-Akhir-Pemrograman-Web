@@ -6,9 +6,9 @@
     $allowed_roles = ['admin', 'dosen', 'mahasiswa'];
     $current_role = isset($_GET['role']) && in_array($_GET['role'], $allowed_roles) ? $_GET['role'] : 'mahasiswa';
 
-    // cek apakah user sudah login
-    if (!isset($_SESSION['user'])) {
-        header("Location: ../login.php");
+    // Cek login dan role
+    if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+        header("Location: ../halaman_utama.php");
         exit;
     }
 

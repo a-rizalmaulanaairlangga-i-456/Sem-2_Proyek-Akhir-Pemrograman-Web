@@ -4,6 +4,12 @@
     }
     include __DIR__ . '/../koneksi.php';
 
+    // Cek login dan role
+    if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+        header("Location: ../halaman_utama.php");
+        exit;
+    }
+
     // Cek role
     if ($_SESSION['role'] !== 'dosen') {
         echo "Akses ditolak.";

@@ -4,9 +4,9 @@
     }
     include __DIR__ . '/../koneksi.php';
 
-    // Cek session user dan role
-    if (!isset($_SESSION['user']) || $_SESSION['role'] !== 'mahasiswa') {
-        header("Location: ../login.php");
+    // Cek login dan role
+    if (!isset($_SESSION['user']) || !isset($_SESSION['role'])) {
+        header("Location: ../halaman_utama.php");
         exit;
     }
 
