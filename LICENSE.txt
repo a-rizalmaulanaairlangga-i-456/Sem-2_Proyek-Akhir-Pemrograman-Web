@@ -1,0 +1,11 @@
+Copyright (c) 2025 Rizal Maulana Airlangga
+
+All rights reserved.
+
+This source code is intended for personal portfolio and educational purposes only.
+You may view or reference this code for learning purposes, but you may not copy,
+use, reproduce, modify, distribute, or sublicense any part of this software
+without explicit written permission from the author.
+
+For commercial use, collaboration, or licensing inquiries, please contact:
+rizalmaulanaairlanggad4itb2024@gmail.com
